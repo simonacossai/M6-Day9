@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     Article.associate = (models)=>{
      Article.belongsTo(models.Category)
      Article.belongsTo(models.Author)
+     Article.hasMany(models.Review)
 
     };
     return Article;
